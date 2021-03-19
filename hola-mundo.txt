@@ -2,3 +2,5 @@ Hola, mundo!
 
 здесь был Петя!
 здесь был Вася!
+
+lucky was here!
