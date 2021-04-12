@@ -107,4 +107,28 @@ def lightNumber(number):
     GPIO.output(25, 0)
     GPIO.output(24, 0)
 
-lightNumber(237)
+def runningPattern(pattern, direction):
+    a=bin(pattern)[2:].zfill(8)
+    c=[int(i) for i in a]
+    GPIO.output(21, c[0])
+    GPIO.output(20, c[1])
+    GPIO.output(16, c[2])
+    GPIO.output(12, c[3])
+    GPIO.output(7, c[4])
+    GPIO.output(8, c[5])
+    GPIO.output(25, c[6])
+    GPIO.output(24, c[7])
+    time.sleep(1)
+    if direction=='left':
+        While True:
+            a.append(a[0])
+            a.pop(0)
+            GPIO.output(21, c[0])
+            GPIO.output(20, c[1])
+            GPIO.output(16, c[2])
+            GPIO.output(12, c[3])
+            GPIO.output(7, c[4])
+            GPIO.output(8, c[5])
+            GPIO.output(25, c[6])
+            GPIO.output(24, c[7])
+            time.sleep(1)
